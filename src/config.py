@@ -121,3 +121,11 @@ channels_Lee2019_MI = ['FC5', 'FC1', 'FC2', 'FC6', 'C3', 'Cz', 'C4', 'CP5', 'CP1
                        'C5', 'C1', 'C2', 'C6', 'CP3', 'CPz', 'CP4']
 
 channels_BNCI2014004 = ['C3', 'Cz', 'C4']
+
+# LOCAL_10_SUBJECT_OVERRIDE
+_original_get_subject_list = get_subject_list
+
+def get_subject_list(dataset_name):
+    if dataset_name == "PhysionetMI":
+        return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    return _original_get_subject_list(dataset_name)

@@ -215,7 +215,7 @@ def train(args):
 	df = pd.DataFrame(results_list, columns=column_names)
 
 	if existing:
-		df = df_previous.append(df, ignore_index=True)
+		df = pd.concat([df_previous, df], ignore_index=True)
 
 	df.to_excel(results_xls_filename)
 	############################
