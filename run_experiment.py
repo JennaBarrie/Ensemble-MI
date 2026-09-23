@@ -23,7 +23,7 @@ exp_args_dict = {
     'resume_exp_id': '',
 
     'use_subsets': True,
-    'n_subsets': 7,
+    'n_subsets': 3,
     'ensemble_loss_1': True,
     'ensemble_loss_2': True,
     'loss_2_single_expert': False,
@@ -57,7 +57,7 @@ exp_args_dict = {
     'exp_group': exp_name,
     ############################
     # Training hyperparams
-    'max_epochs': 120,
+    'max_epochs': 12,
     'warmup_epochs': 0,
     'optim': 'sgd',
     'lr': 0.01,
