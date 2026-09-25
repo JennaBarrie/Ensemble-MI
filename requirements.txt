@@ -30,7 +30,6 @@ six
 threadpoolctl
 urllib3
 tabulate
-torch
 moabb
 openpyxl
 braindecode
