@@ -79,7 +79,7 @@ class Backbone_EEGNetv4(nn.Sequential):
         self.dropout_1_prob = dropout_1_prob
         self.backbone_indices = backbone_indices
 
-        n_out_time = 12 # TODO: set this automatically, instead of hard-coded
+        n_out_time = 9 # patched for 3.0s/300-sample windows
         self.final_conv_length = n_out_time
         self._num_features = self.F2 * self.final_conv_length
         ##############################################################################
@@ -300,7 +300,7 @@ class Classifier_Shared(nn.Module):
         if self.classifier_indices:
             encoder = get_backbone_eegnetv4(k_width=1,
                                             in_chans=16, # TODO: set this automatically, instead of hard-coded
-                                            input_window_samples=400, # TODO: set this automatically, instead of hard-coded
+                                            input_window_samples=300, # patched for 3.0s trials
                                             n_classes=2, # TODO: set this automatically, instead of hard-coded
                                             dropout_1_prob=dropout_1_prob,
                                             backbone_indices=self.classifier_indices)
@@ -354,7 +354,7 @@ class Classifier_Multi(nn.Module):
             if self.classifier_indices:
                 encoder = get_backbone_eegnetv4(k_width=1, # TODO: set this automatically, instead of hard-coded
                                                 in_chans=16, # TODO: set this automatically, instead of hard-coded
-                                                input_window_samples=400, # TODO: set this automatically, instead of hard-coded
+                                                input_window_samples=300, # patched for 3.0s trials
                                                 n_classes=2, # TODO: set this automatically, instead of hard-coded
                                                 dropout_1_prob=dropout_1_prob,
                                                 backbone_indices=self.classifier_indices)
