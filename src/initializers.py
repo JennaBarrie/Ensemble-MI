@@ -101,7 +101,9 @@ def init_dataset(args):
             pickle.dump(split_dict, outp, pickle.HIGHEST_PROTOCOL)
 
     else:
-        splits = np.array_split(subject_range, args.n_folds)
+        # Patched: assign fold groups by subject ID (mod n_folds) instead of list position,
+        # so adding more subjects only grows existing groups rather than reshuffling all of them.
+        splits = [[s for s in subject_range if s % args.n_folds == g] for g in range(args.n_folds)]
         splits = deque(splits)
         splits.rotate(args.fold + 1)
         split_test = splits[0]

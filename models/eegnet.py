@@ -137,7 +137,7 @@ class EEGNetv4_class(nn.Sequential):
         self.pool_2 = pool_class(kernel_size=(1, 8), stride=(1, 8))
 
         n_out_virtual_chans = 1
-        n_out_time = 12 # TODO: set this automatically, instead of hard-coded
+        n_out_time = 9 # patched for 3.0s/300-sample windows
 
         if self.final_conv_length == "auto":
             self.final_conv_length = n_out_time

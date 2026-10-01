@@ -28,7 +28,7 @@ exp_args_dict = {
     'sfreq': 100., # resampling frequency (in Hz)
     't_start_offset': 0.0, # trial start offset (in seconds)
     't_end_offset': 0.0, # trial end offset (in seconds)
-    't_dur': 4.0, # trial duration (in seconds)
+    't_dur': 3.0, # trial duration (in seconds)
     'use_car': True, # apply Common Average Reference (CAR) on EEG signals
 }
 
