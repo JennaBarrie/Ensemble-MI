@@ -27,7 +27,7 @@ exp_args_dict = {
     'ensemble_loss_1': True,
     'ensemble_loss_2': True,
     'loss_2_single_expert': False,
-    'n_modules_stage_1': 4,
+    'n_modules_stage_1': 7,
     'stage_1_is_shared': False,
     'stage_2_is_shared': True,
     'feats_aggr': 'mean',
