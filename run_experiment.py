@@ -57,7 +57,7 @@ exp_args_dict = {
     'exp_group': exp_name,
     ############################
     # Training hyperparams
-    'max_epochs': 120,
+    'max_epochs': 12,
     'warmup_epochs': 0,
     'optim': 'sgd',
     'lr': 0.01,

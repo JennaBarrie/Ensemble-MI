@@ -62,7 +62,7 @@ def get_channel_list(dataset_name):
 
 subjects_BCI_IV_2a = [x for x in range(1, 10)]
 subjects_Cho2017 = [x for x in range(1, 53) if x not in [32, 46, 49]]
-subjects_PhysionetMI = [x for x in range(1, 110) if x not in [88, 90, 92, 100, 104, 106]]
+subjects_PhysionetMI = list(range(1, 16))
 subjects_Lee2019_MI = [x for x in range(1, 55)]
 subjects_BNCI2014004 = [x for x in range(1, 10)]
 
